@@ -1,0 +1,12 @@
+<h1>CD Collection App</h1>
+<h1>Your CDs</h1>
+<ul>
+  @foreach (var cd in Model)
+  {
+    <li>Album: @cd.GetName()</li>
+    <li>Artist: @cd.GetArtistName()</li>
+    <br>
+  }
+</ul>
+<a href='/new'>Add new CD</a>
+<a href='/searchbyartist'>Search by artist</a>

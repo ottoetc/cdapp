@@ -4,25 +4,37 @@ namespace CdList
 {
   public class Cd
   {
-    private string _name;
+    private string _artistName;
+    private string _albumName;
     private int _id;
     private static List<Cd> _allCd = new List<Cd>{};
 
-    public Cd(string name)
+    public Cd(string albumName, string artistName)
     {
-      _name = name;
+      _artistName = artistName;
+      _albumName = albumName;
       _allCd.Add(this);
       _id = _allCd.Count;
     }
 
-    public string GetName()
+    public string GetArtistName()
     {
-      return _name;
+      return _artistName;
     }
 
-    public void SetName(string newName)
+    public void SetArtistName(string newArtistName)
     {
-      _name = newName;
+      _artistName = newArtistName;
+    }
+
+    public string GetName()
+    {
+      return _albumName;
+    }
+
+    public void SetName(string newAlbumName)
+    {
+      _albumName = newAlbumName;
     }
 
     public int GetId()
@@ -30,7 +42,7 @@ namespace CdList
       return _id;
     }
 
-    public List<Cd> GetAllCd()
+    public static List<Cd> GetAllCd()
     {
       return _allCd;
     }
